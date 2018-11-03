@@ -173,6 +173,7 @@ TuyaCloud.prototype.request = async function (options) {
 
 class TuyaCloudRequestError extends Error {
   constructor(options) {
+    super(options.message);
     this.code = options.code;
     this.message = options.message;
   }
